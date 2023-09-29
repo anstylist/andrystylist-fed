@@ -1,0 +1,27 @@
+[
+  {
+    "id": "menu-home",
+    "title": "Home",
+    "route": "/"
+  },
+  {
+    "id": "menu-about",
+    "title": "About Me",
+    "route": "/about-me"
+  },
+  {
+    "id": "menu-blog",
+    "title": "Blog",
+    "route": "/blog"
+  },
+  {
+    "id": "menu-shop",
+    "title": "Shop",
+    "route": "/shop"
+  },
+  {
+    "id": "menu-courses",
+    "title": "Courses",
+    "route": "/courses"
+  }
+]

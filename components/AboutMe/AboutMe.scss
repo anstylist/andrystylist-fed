@@ -1,0 +1,70 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+
+.about-me {
+  @include mixins.set-container-padding();
+
+  &__container {
+    display: flex;
+    position: relative;
+  }
+
+  &__img-container {
+    position: relative;
+    width: 600px;
+    height: 750px;
+    border-top: 1rem solid rgba(72,19,44, 0.7);
+    border-left: 1rem solid rgba(72,19,44, 0.7);
+    box-shadow: rgba(72,19,44, 0.3) 0px 19px 38px, rgba(72,19,44, 0.22) 0px 15px 12px;
+    left: 7rem;
+    z-index: 1;
+  }
+
+  &__img {
+    border: .7rem solid white;
+  }
+
+  &__message {
+    position: absolute;
+    top: 7rem;
+    background-color: rgb(204,103,96, 0.3);
+    z-index: 0;
+    padding: 3rem;
+    min-height: 32rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &--box {
+      width: 42%;
+
+      h2 {
+        font-size: 3rem;
+        line-height: 3.4rem;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 4rem;
+          height: 1px;
+          border: 2px solid variables.$font-main-color;
+          background-color: variables.$font-main-color;
+          border-radius: 5px;
+          margin: 2rem 0;
+        }
+      }
+
+      p {
+        margin-bottom: 2.5rem;
+        line-height: 2rem;
+      }
+    }
+
+    &--button {
+      width: 17rem;
+    }
+  }
+}
+
+@include mixins.set-container-width(".about-me");

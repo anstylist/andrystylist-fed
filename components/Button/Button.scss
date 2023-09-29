@@ -1,0 +1,39 @@
+@use "../../styles/variables";
+
+.ast-button {
+  font-size: 1.2rem;
+  padding: 0.7rem 1.5rem;
+  min-height: 3.5rem;
+  border: 2px solid variables.$border-default-color;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 14px 33px, rgba(0, 0, 0, 0.22) 0px 10px 7px;
+  color: variables.$font-default-color;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s;
+
+  &:disabled {
+    opacity: 0.7;
+  }
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-width: 1px;
+    cursor: pointer;
+  }
+
+  &:active {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 14px 33px, rgba(0, 0, 0, 0.22) 0px 10px 7px;
+  }
+
+  &__primary {
+    color: variables.$font-main-color;
+    border: 2px solid variables.$border-main-color;
+  }
+
+  &__secondary {
+    color: variables.$font-secondary-color;
+    border: 2px solid variables.$border-secondary-color;
+  }
+}

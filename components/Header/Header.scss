@@ -1,0 +1,64 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: variables.$header-menu-bg-color;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  color: variables.$header-main-menu-color;
+  font-size: 16px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 999;
+  font-family: variables.$font-roboto;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 1rem;
+
+    .header__item:first-child {
+      margin-left: 0;
+    }
+
+    .header__item:nth-child(2) {
+      margin-left: auto;
+    }
+  }
+
+  &-section {
+    display: flex;
+
+    &__logo {
+      display: block;
+      height: 65px;
+      width: 60px;
+      position: relative;
+      overflow: visible;
+
+      &--img {
+        object-fit: contain;
+        object-position: left;
+      }
+    }
+  }
+}
+
+@include mixins.set-container-width(".header");
+
+@media screen and (min-width: 1024px) {
+  .header {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 4rem;
+      padding: 1rem;
+    }
+  }
+}
