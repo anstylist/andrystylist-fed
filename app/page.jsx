@@ -5,6 +5,7 @@ import HomeGallery from '@/components/Jumbotron/HomeGallery'
 import Services from '@/components/Services/Services'
 import BeforeAfter from '@/components/BeforeAfter/BeforeAfter'
 import Testimony from '@/components/Testimony/Testimony'
+import ContactUs from '@/components/ContactUs/ContactUs';
 
 import { CartProductsProvider } from '../context/CartProductsContext'
 import { AuthProvider } from '../context/AuthContext'
@@ -23,6 +24,7 @@ export default function Home() {
           <Services />
           <BeforeAfter />
           <Testimony />
+          <ContactUs />
         </main>
         <Footer />
       </CartProductsProvider>

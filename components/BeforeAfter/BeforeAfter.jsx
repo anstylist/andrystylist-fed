@@ -2,13 +2,8 @@
 
 import React, { useRef, useState } from 'react'
 import { LuChevronsLeftRight } from 'react-icons/lu'
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaTiktok,
-  FaPinterestP
-} from 'react-icons/fa6'
 import './BeforeAfter.scss'
+import SocialNetworks from '../SocialNetworks/SocialNetworks';
 
 const urlBefore = 'https://res.cloudinary.com/dzmkilinu/image/upload/v1689393392/medical-site/before.jpg'
 const urlAfter = 'https://res.cloudinary.com/dzmkilinu/image/upload/v1689393391/medical-site/after_fnmo0x.jpg'
@@ -92,20 +87,7 @@ export default function App () {
             </div>
           </section>
         </section>
-        <section className='before-after__social-networks'>
-          <a href='https://www.instagram.com/andrystylist' target='_blank' aria-label='Adrystylist Instagram'>
-            <FaInstagram className='before-after__social-networks--icon' />
-          </a>
-          <a href='https://www.facebook.com/andrystylistf' target='_blank' aria-label='Adrystylist Facebook'>
-            <FaFacebookF className='before-after__social-networks--icon' />
-          </a>
-          <a href='https://www.tiktok.com/@andrystylist' target='_blank' aria-label='Adrystylist TikTok'>
-            <FaTiktok className='before-after__social-networks--icon' />
-          </a>
-          <a href='https://www.pinterest.com/andrystylist' target='_blank' aria-label='Adrystylist Pinterest'>
-            <FaPinterestP className='before-after__social-networks--icon' />
-          </a>
-        </section>
+        <SocialNetworks />
       </div>
     </div>
   )

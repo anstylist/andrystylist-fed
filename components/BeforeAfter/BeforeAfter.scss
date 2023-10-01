@@ -31,31 +31,6 @@
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
-
-  &__social-networks {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: variables.$font-main-color;
-    z-index: 1;
-
-    a {
-      display: inline-block;
-      width: 1.5rem;
-      height: 1.5rem;
-      margin: 2rem;
-    }
-
-    a:hover &--icon {
-      color: variables.$font-secondary-color;
-    }
-
-    &--icon {
-      font-size: 1.5rem;
-      transition: color ease-in .25s;
-    }
-  }
 }
 .handler {
   position: absolute;
