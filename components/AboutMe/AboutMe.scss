@@ -3,6 +3,7 @@
 
 .about-me {
   @include mixins.set-container-padding();
+  overflow-y: hidden;
 
   &__container {
     display: flex;
@@ -42,6 +43,7 @@
       h2 {
         font-size: 3rem;
         line-height: 3.4rem;
+        font-family: variables.$font-roboto;
 
         &::after {
           content: '';

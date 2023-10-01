@@ -1,0 +1,83 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+
+.testimony {
+  @include mixins.set-container-padding();
+  --testimony-section-width: 320px;
+  position: relative;
+  color: variables.$font-main-color;
+  background-color: variables.$bg-smooth-section;
+
+  &__section-title {
+    font-family: variables.$font-roboto;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  &__slider {
+    position: relative;
+    width: 100%;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: var(--testimony-section-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img-box {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .quotes {
+    display: inline-block;
+  }
+
+  &__comment {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 2rem;
+    line-height: 1.4rem;
+    text-align: center;
+    margin: 2rem 0;
+    font-style: italic;
+  }
+
+  &__title {
+    font-weight: bold;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+}
+
+@include mixins.set-container-width(".testimony");
+
+// @media screen and (min-width: 1280px) {
+//   .testimony {
+//     &__container {
+//       flex-direction: row;
+//       align-items: center;
+//     }
+//   }
+// }  

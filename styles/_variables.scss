@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&display=swap');
 
 $jumbotron-font-color: #aba4a4;
-$font-raleway: 'Raleway', sans-serif;
-$font-roboto: 'Roboto Serif', serif;
 $header-contact-bg-color: #48142C;
 $border-main-color: #48142C;
 $header-contact-color: #ffffff;
@@ -25,13 +23,18 @@ $header-appointment-btn: #005CB9;
 $header-menu-color-hover: #F27566;
 $header-menu-border: #DBEEFE;
 $header-menu-btn: #F27566;
-$font-open-sans: 'Open Sans', sans-serif;
 $bg-main-color: #ffffff;
+$bg-secondary-color: rgba(0, 0, 0, 0.7);
+$bg-dark-section: #222222;
+$bg-smooth-section: rgba(204, 103, 96, 0.3);
+
+$font-open-sans: 'Open Sans', sans-serif;
+$font-poppins: 'Poppins', sans-serif;
+$font-raleway: 'Raleway', sans-serif;
+$font-roboto: 'Roboto Serif', serif;
 
 $footer-background: #000000;
 $footer-font-color: #FFFFFF;
-$font-open-sans: 'Open Sans', sans-serif;
-$font-poppins: 'Poppins', sans-serif;
 
 $font-size-x-small: 16px;
 $font-size-small: 18px;
@@ -42,3 +45,13 @@ $font-size-xx-large: 70px;
 $font-size-optional: 35px;
 $font-line-height: 1.8;
 $font-x-line-height: 1.2;
+
+$color-lightblue:#48142C;
+$font-size-x-small: 16px;
+$font-size-large: 24px;
+$font-size-x-large: 48px;
+
+$font-open-sans: 'Open Sans', sans-serif;
+$font-poppins: 'Poppins', sans-serif;
+$font-raleway: 'Raleway', sans-serif;
+$font-roboto: 'Roboto Serif', serif;

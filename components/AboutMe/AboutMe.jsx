@@ -1,23 +1,30 @@
 'use client'
-import React from 'react'
-import './AboutMe.scss'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import './AboutMe.scss'
 import Button from '../Button/Button';
+import ParallaxSection from '../ParallaxSection/ParallaxSection';
 
 function AboutMe() {
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
-    <section className="about-me">
+    <ParallaxSection className="about-me" scrollMultiplier={0.05}>
       <div className="about-me__container">
-        <div className='about-me__img-container'>
+        <div className='about-me__img-container' data-aos="fade-up-right">
           <Image
             className='about-me__img'
             src="https://res.cloudinary.com/dq66wlb15/image/upload/v1695838744/large_73211971_625104701354480_2771310384270565021_n_8034efc3e3.jpg"
-            alt="Andry Peña"
+            alt="Andry Peña - Andrystylist"
             fill
           />
         </div>
         <div className="about-me__message">
-          <section className='about-me__message--box'>
+          <section className='about-me__message--box' data-aos="fade-up">
             <h2>About Me</h2>
             <div>
               <p>
@@ -33,7 +40,7 @@ function AboutMe() {
           </section>
         </div>
       </div>
-    </section>
+    </ParallaxSection>
   )
 }
 

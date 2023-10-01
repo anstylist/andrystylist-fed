@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import './globals.scss'
-import { Roboto_Serif } from 'next/font/google'
+import { Raleway } from 'next/font/google'
 
-const font = Roboto_Serif({ subsets: ['latin'] })
+const font = Raleway({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Andrystylist - Home',
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <meta name="keywords" content="hair, skincare, style, beauty, hair cut, makeup, makeup artist, glam, glamour, andry, peña, bride, andrystylist, maquillaje, peinados, cortes, productos, entrepreneurship, woman, content creator, influencer, creadora de contenido, fiance, novia" />
+        <meta name="keywords" content="hair, skincare, style, beauty, haircut, hairstyle, makeup, makeup artist, glam, glamour, andry, peña, bride, andrystylist, maquillaje, peinados, cortes, productos, entrepreneurship, woman, content creator, influencer, creadora de contenido, fiance, novia" />
         <meta name="robots" content="index" />
         <meta name="author" content={metadata.title} />
         <meta property="og:title" content={metadata.description} />

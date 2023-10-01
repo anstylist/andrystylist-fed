@@ -24,9 +24,9 @@ function HomeGallery() {
         <div>
           <div className="home-gallery__slider--item item-0">
             <img src="https://res.cloudinary.com/dq66wlb15/image/upload/v1695956357/holi-color-powder-explosion-with-rainbow-isolated-white-background-burst-vibrant-colors-generative-ai_58409-31573_eqxouf.jpg" className='background-video' />
-            <img src="https://res.cloudinary.com/dq66wlb15/image/upload/v1695838748/large_126048659_3426041347512031_1902567701484988567_n_ba98f42a83.jpg" alt="Andry's Artistic Makeup" className="first" />
-            <img src="https://res.cloudinary.com/dq66wlb15/image/upload/v1695838746/large_116745727_305778577501454_5766456582798214895_n_ed49410e55.jpg"  alt="Andry's Artistic Makeup" className="second" />
-            <img src='https://res.cloudinary.com/dq66wlb15/image/upload/v1695838745/medium_106701455_698890784010441_7827307154597066723_n_4a27a558ad.jpg'  alt="Andry's Artistic Makeup" className="third"/>
+            <img src="https://res.cloudinary.com/dq66wlb15/image/upload/v1695838748/large_126048659_3426041347512031_1902567701484988567_n_ba98f42a83.jpg" alt="Andry's Artistic Makeup - Andrystylist" className="first" />
+            <img src="https://res.cloudinary.com/dq66wlb15/image/upload/v1695838746/large_116745727_305778577501454_5766456582798214895_n_ed49410e55.jpg"  alt="Andry's Artistic Makeup - Andrystylist" className="second" />
+            <img src='https://res.cloudinary.com/dq66wlb15/image/upload/v1695838745/medium_106701455_698890784010441_7827307154597066723_n_4a27a558ad.jpg'  alt="Andry's Artistic Makeup - Andrystylist" className="third"/>
           </div>
         </div>
         <div>
