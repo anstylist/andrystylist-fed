@@ -19,6 +19,7 @@ export default function Home() {
       <CartProductsProvider>
         <Header />
         <main>
+          <h1 className='home__main-title'>Andry Peña Home Page</h1>
           <HomeGallery />
           <AboutMe />
           <Services />
