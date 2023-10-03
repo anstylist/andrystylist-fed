@@ -76,6 +76,8 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
+      color: variables.$footer-font-color;
+
 
       .section {
         width: 40%;
@@ -89,6 +91,9 @@
       padding-bottom: 5rem;
       padding-inline: 3rem;
       justify-content: space-between;
+      color: variables.$footer-font-color;
+
+
 
       .section {
         width: 23%;
@@ -103,6 +108,8 @@
   @media (min-width:1440px) {
     &__section__container {
       padding-inline: 6rem;
+      color: variables.$footer-font-color;
+
     }
   }
 }

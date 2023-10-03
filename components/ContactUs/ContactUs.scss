@@ -7,7 +7,7 @@
     position: relative;
 
     &__container {
-        
+        width: 79%;
     }
 
     &__title {
@@ -79,4 +79,6 @@
     
 }
 
-@include mixins.set-container-width(".contact-us");
+@media screen and (min-width: 1024px) {
+    @include mixins.set-container-width(".contact-us");
+}

@@ -4,13 +4,14 @@
 .about-me {
   @include mixins.set-container-padding();
   overflow-y: hidden;
-  padding: 0;
 
   &__container {
     display: flex;
     flex-direction: column;
     position: static;
     margin: 3rem 0;
+    width: 100vw;
+
   }
 
   &__img-container {
@@ -41,7 +42,7 @@
     align-items: center;
 
     &--box {
-      width: 70vw;
+      width: 100vw;
 
       h2 {
         font-size: 2rem;
@@ -83,20 +84,27 @@
       display: flex;
       flex-direction: row;
       position: relative;
-      margin: 0;
+      margin: 95px;
+      width: 100%;
+      left: 7rem;
+
     }
 
     &__img-container {
         position: relative;
         width: 600px;
         height: 750px;
-        left: 7rem;
     }
     &__message {
       position: absolute;
-      left: 0;
-      
       justify-content: flex-end;
+      width:80%;
+      left: 47%;
+      top: -7%;
+
+      &--box {
+        width: 42%;
+      }
 
       h2 {
         font-size: 3rem;
@@ -104,16 +112,10 @@
       }
 
       p {
-        margin-bottom: 2.5rem;
-        line-height: 2rem;
-      }
-      &--box {
-        width: 42%;
+        margin-bottom: 2rem;
+        line-height: 1.5rem;
       }
 
-      &--button {
-        width: 17rem;
-      }
 
     }
   }

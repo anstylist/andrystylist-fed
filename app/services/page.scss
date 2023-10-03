@@ -1,0 +1,19 @@
+@use "../../styles/variables";
+
+.page {
+  &__title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 3rem;
+    margin-top: 2rem;
+    background-color: variables.$bg-dark-section;
+    color: variables.$bg-main-color;
+
+    &:hover {
+      color: variables.$header-contact-color-hover;}
+
+  }
+}
+

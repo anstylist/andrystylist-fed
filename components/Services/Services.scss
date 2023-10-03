@@ -8,6 +8,7 @@
   color: variables.$bg-main-color;
   background-color: variables.$bg-dark-section;
 
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -22,8 +23,11 @@
       align-items: center;
       justify-content: space-between;
 
-      &:nth-child(2) {
+      &:not(:first-child) {
         margin-top: 3rem;
+      }
+
+      &.more-service-link__box {
         justify-content: center;
       }
     }

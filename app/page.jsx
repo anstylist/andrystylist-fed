@@ -22,7 +22,7 @@ export default function Home() {
           <h1 className='home__main-title'>Andry Peña Home Page</h1>
           <HomeGallery />
           <AboutMe />
-          <Services />
+          <Services showButton />
           <BeforeAfter />
           <Testimony />
           <ContactUs />

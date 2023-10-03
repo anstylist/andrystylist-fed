@@ -25,7 +25,7 @@ function Footer() {
         </Grid>
       </div>
       <div className='footer__copyright__container'>
-        <p>© Andrystylist - 2023</p>
+        <div>© Andrystylist - 2023</div>
       </div>
     </footer>
   )
