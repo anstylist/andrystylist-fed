@@ -1,6 +1,14 @@
 @import '../styles/index.scss';
 
-.home__main-title {
+#root {
+  overflow-x: hidden;
+}
+
+.home__main-title, .page__main-title {
   visibility: hidden;
   height: 0;
+}
+
+.loading-page {
+  opacity: 0.4;
 }

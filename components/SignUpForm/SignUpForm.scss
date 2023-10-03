@@ -1,0 +1,108 @@
+@use '../../styles/variables';
+@use '../../styles//mixins';
+
+@include mixins.set-container-width(".sign-up-form");
+
+.sign-up-form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 90vh;
+  background-image: url(https://res.cloudinary.com/dq66wlb15/image/upload/v1696211272/elevated-view-makeup-products-white-background_23-2147899586_1_gn62v7.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &__container {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  &__img {
+    z-index: -1;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    line-height: 2.2rem;
+  }
+
+  &__form {
+    width: 100%;
+    padding: 2rem;
+    border: 1px solid #e5e5e5;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    z-index: 1;
+
+    &--error {
+      border-radius: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__field {
+    margin-bottom: 1.2rem;
+  }
+
+  &__action-link {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+
+    a {
+      margin: 0 1rem;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+  
+      &:hover {
+        color: variables.$link-color-hover;
+      }
+    }
+  }
+}
+
+/* Login form fields */
+.sign-up-form-field {
+  margin-bottom: 1.2rem;
+}
+
+
+
+/* Login form error message */
+.sign-up-form-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .sign-up-form {
+    height: 80vh;
+
+    &__container {
+      width: 70vw;
+    }
+    
+    &__form {
+      width: 640px;  
+    }
+  }
+}

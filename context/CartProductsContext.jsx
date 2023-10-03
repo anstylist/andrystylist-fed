@@ -1,13 +1,16 @@
 'use client'
 /* eslint-disable react/prop-types */
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 
 const CartProductsContext = createContext()
 
 export const CartProductsProvider = ({ children }) => {
-  const productsInStorage = localStorage.getItem('cartProducts') || '[]'
+  const [productsList, setCartProductsList] = useState([])
 
-  const [productsList, setCartProductsList] = useState(JSON.parse(productsInStorage || '[]'))
+  useEffect(() => {
+    const productsInStorage = localStorage?.getItem('cartProducts') || '[]'
+    setCartProductsList(JSON.parse(productsInStorage || '[]'))
+  }, [])
 
   const setProductsList = (products) => {
     let newProductsList = products
@@ -18,7 +21,7 @@ export const CartProductsProvider = ({ children }) => {
 
     setCartProductsList(newProductsList)
 
-    localStorage.setItem('cartProducts', JSON.stringify(newProductsList || []))
+    localStorage?.setItem('cartProducts', JSON.stringify(newProductsList || []))
   }
 
   return (

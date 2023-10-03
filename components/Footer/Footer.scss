@@ -11,6 +11,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: variables.$header-menu-bg-color;
+  color: variables.$font-default-color;
 
   &__container {
     @include mixins.set-container-padding();

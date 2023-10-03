@@ -47,7 +47,7 @@ function HeaderRight({ onMenuOpen, mustHideMenu }) {
       </button>
       <ul className={`header__nav-right-menu ${isMenuVisible && 'header__nav-right-menu--visible'}`} aria-label='Search'>
         <li className='header__nav-right-menu__item'>
-          <Link href='/cart' className='header__nav-right-link header__nav-right-link--cart' aria-label='Shopping Cart'>
+          <Link href='/' className='header__nav-right-link header__nav-right-link--cart' aria-label='Shopping Cart'>
             <HiOutlineShoppingCart className='header__nav-right-icon' />
             <div className='header__nav-right-counter-tag'>{productsList.length}</div>
           </Link>
@@ -55,11 +55,11 @@ function HeaderRight({ onMenuOpen, mustHideMenu }) {
         {isLoggedIn && (
           <>
             <li className='header__nav-right-menu__item'>
-              <Link href='/user-profile' className='header__nav-right-link header__nav-right-menu__my-account'>
+              <Link href='/' className='header__nav-right-link header__nav-right-menu__my-account'>
                 <div className='header__nav-right-menu__user-avatar-container'>
                   <img
                     className='header__nav-right-menu__user-avatar'
-                    src={`https://robohash.org/${authData.fullName}`}
+                    src={`https://res.cloudinary.com/dq66wlb15/image/upload/c_thumb,w_200,g_face/v1696211709/Screen_Shot_2023-10-01_at_8.54.55_PM_t1fx9n.png`}
                     alt={authData.fullName}
                   />
                 </div>
@@ -81,7 +81,7 @@ function HeaderRight({ onMenuOpen, mustHideMenu }) {
               </Link>
             </li>
             <li className='header__nav-right-menu__item'>
-              <Link href='/register' className='header__nav-right-link '>
+              <Link href='/sign-up' className='header__nav-right-link '>
                 Sign Up
               </Link>
             </li>

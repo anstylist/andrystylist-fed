@@ -1,0 +1,93 @@
+@use '../../styles/variables';
+@use '../../styles//mixins';
+
+@include mixins.set-container-width(".login-form");
+
+.login-form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 80vh;
+  background-image: url(https://res.cloudinary.com/dq66wlb15/image/upload/v1696211272/elevated-view-makeup-products-white-background_23-2147899586_1_gn62v7.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &__container {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  &__img {
+    z-index: -1;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__form {
+    width: 640px;
+    padding: 2rem;
+    border: 1px solid #e5e5e5;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    z-index: 1;
+
+    &--error {
+      border-radius: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__field {
+    margin-bottom: 1.2rem;
+  }
+
+  &__action-link {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+
+    a {
+      margin: 0 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+  
+      &:hover {
+        color: variables.$link-color-hover;
+      }
+    }
+  }
+}
+
+/* Login form fields */
+.login-form-field {
+  margin-bottom: 1.2rem;
+}
+
+
+
+/* Login form error message */
+.login-form-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 10px;
+}

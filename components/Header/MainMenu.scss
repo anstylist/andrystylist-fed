@@ -15,7 +15,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 
   &__icon {
     width: 2rem;
@@ -30,9 +29,10 @@
 .menu {
   &__list {
     display: none;
+    left: 100vw;
+    transition: left 0.25s ease-in;
 
     &:not(.menu__list--submenu) {
-      max-height: 580px;
       overflow-y: scroll;
     }
 
@@ -45,21 +45,25 @@
     }
 
     &--submenu-open {
+      @include leftPosition();
       display: block;
-      @include leftPosition()
     }
 
     &--visible {
       display:flex;
       flex-direction: column;
-      color: variables.$header-menu-color;
+      justify-content: start;
+      align-items: center;
+      padding-top: 5rem;
       position: absolute;
-      top: 125%;
+      left: 0;
+      top: 64px;
       background: variables.$header-menu-bg-color;
       white-space: nowrap;
-      width: 80vw;
-      transform: translateX(-38%);
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      width: 100vw;
+      height: calc(100vh - 64px);
+      color: variables.$header-main-menu-color;
     }
 
     &-icon {
@@ -76,7 +80,8 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    border-top: 1px solid variables.$header-menu-border;
+    border: 0;
+
     justify-content: space-between;
     white-space: nowrap;
 
@@ -116,7 +121,7 @@
 
   &__list-link {
     width: 100%;
-    padding: .9rem;
+    padding: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
