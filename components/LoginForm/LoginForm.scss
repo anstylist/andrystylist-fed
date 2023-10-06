@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 80vh;
+  height: 90vh;
   background-image: url(https://res.cloudinary.com/dq66wlb15/image/upload/v1696211272/elevated-view-makeup-products-white-background_23-2147899586_1_gn62v7.avif);
   background-size: cover;
   background-position: center;
@@ -16,7 +16,7 @@
   background-attachment: fixed;
 
   &__container {
-    width: 70vw;
+    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,10 +37,11 @@
   h1 {
     font-size: 2rem;
     margin-bottom: 2rem;
+    line-height: 2.4rem;
   }
 
   &__form {
-    width: 640px;
+    width: 100%;
     padding: 2rem;
     border: 1px solid #e5e5e5;
     background-color: rgba(255, 255, 255, 0.5);
@@ -49,7 +50,7 @@
     margin-top: 4rem;
     z-index: 1;
 
-    &--error {
+    &--error, &--success {
       border-radius: 0;
       margin-bottom: 1rem;
     }
@@ -90,4 +91,18 @@
   color: red;
   font-size: 12px;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .login-form {
+    height: 80vh;
+  
+    &__container {
+      width: 70vw;
+    }
+
+    &__form {
+      width: 640px;
+    }
+  }
 }

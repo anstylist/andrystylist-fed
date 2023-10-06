@@ -7,7 +7,7 @@ import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/components/UIMaterialTheme/ThemeProvider';
-import "./LoginForm.scss";
+import "./ForgotPasswordForm.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { AuthContext } from "@/context/AuthContext";
@@ -16,13 +16,13 @@ import * as AuthService from "@/services/AuthService";
 import Loading from "../Loading/Loading";
 
 
-const LoginForm = ({ alert }) => {
+const ForgotPasswordForm = () => {
   const [error, setError] = useState(null);
+  const [result, setResult] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
-  const { authData, updateAuthData } = useContext(AuthContext);
+  const { authData } = useContext(AuthContext);
 
   useEffect(() => {
     if (authData.token) {
@@ -35,32 +35,24 @@ const LoginForm = ({ alert }) => {
     setIsLoading(true);
 
     try {
-      const loginData = await AuthService.login({ identifier: email, password });
-      const userData = await AuthService.getInitialUserData({ token: loginData.jwt });
-      
-      setError(null);
-
-      updateAuthData({
-        fullName: loginData.user.username,
-        email: loginData.user.email,
-        status: 'authenticated',
-        token: loginData.jwt,
-        roles: [loginData.user.role]
-      });
+      const forgotPasswordData = await AuthService.forgotPassword({ email });
+      setError(null)
     } catch (error) {
-      setError(error);
+      setError(error)
     } finally {
-      setIsLoading(false);
+      setResult({
+        message: 'If an there is a credential that matches with the one you have provided you will receive an email with a link to reset your password'
+      });
     }
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <section className="login-form">
-        <section className="login-form__container">
-          <header className="login-form__header">
+      <section className="forgot-password-form">
+        <section className="forgot-password-form__container">
+          <header className="forgot-password-form__header">
             <Image
-              className="login-form__img"
+              className="forgot-password-form__img"
               src="https://res.cloudinary.com/dq66wlb15/image/upload/v1695838397/animation2_6bcbd06d05.svg"
               alt="Andry Peña - Andrystylist"
               fill
@@ -68,21 +60,15 @@ const LoginForm = ({ alert }) => {
               onDrag={(event) => event.preventDefault()}
             />
           </header>
-          <form className="login-form__form" onSubmit={handleSubmit}>
+          <form className="forgot-password-form__form" onSubmit={handleSubmit}>
             <h1 style={{ textAlign: "center" }}>Welcome to Andrystylist</h1>
-            {error && <Alert variant="outlined" severity="error" className="login-form__form--error">
-              <AlertTitle>Sign in Error</AlertTitle>
-              {error.message}
+            {result && <Alert variant="outlined" severity="info" className="forgot-password-form__form--info">
+              <AlertTitle>Your notification has been sent</AlertTitle>
+              {result.message}
             </Alert>}
-            {!error && alert && (
-              <Alert variant="outlined" severity={alert.type} className={`login-form__form--${alert.type}`}>
-                <AlertTitle>{alert.title}</AlertTitle>
-                {alert.message}
-              </Alert>
-            )}
             <TextField
               id="email"
-              className="login-form__field"
+              className="forgot-password-form__field"
               label="Email"
               variant="standard"
               type="email"
@@ -90,18 +76,8 @@ const LoginForm = ({ alert }) => {
               required
               onChange={(e) => setEmail(e.target.value)}
             />
-            <TextField
-              id="password"
-              className="login-form__field"
-              label="Password"
-              variant="standard"
-              type="password"
-              value={password}
-              required
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <div className="login-form__action-link">
-              <Link href="/forgot-password">Forgot password?</Link> /
+            <div className="forgot-password-form__action-link">
+              <Link href="/login">I already have an account</Link> /
               <Link href="/sign-up">Create an account</Link>
             </div>
             <Button
@@ -109,7 +85,7 @@ const LoginForm = ({ alert }) => {
               variant="outlined"
               color="primary"
             >
-              Sign in
+              Recover my password
             </Button>
           </form>
           {isLoading && <Loading />}
@@ -119,4 +95,4 @@ const LoginForm = ({ alert }) => {
   );
 };
 
-export default LoginForm;
+export default ForgotPasswordForm;

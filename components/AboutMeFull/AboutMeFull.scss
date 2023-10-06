@@ -4,20 +4,20 @@
 .about-me {
   @include mixins.set-container-padding();
   overflow-y: hidden;
+  padding-top: 1rem;
 
   &__container {
     display: flex;
     flex-direction: column;
     position: static;
-    margin: 3rem 0;
+    margin: 0;
     width: 100vw;
-
   }
 
   &__img-container {
     position: relative;
     width: 400px;
-    height: 550px;
+    height: 530px;
     border-top: 1rem solid rgba(72,19,44, 0.7);
     border-left: 1rem solid rgba(72,19,44, 0.7);
     box-shadow: rgba(72,19,44, 0.3) 0px 19px 38px, rgba(72,19,44, 0.22) 0px 15px 12px;
@@ -73,21 +73,16 @@
   }
 }
 
-@include mixins.set-container-width(".about-me");
-
 @media screen and (min-width: 1024px) {
   .about-me {
-    @include mixins.set-container-padding();
+    @include mixins.set-container-width(".about-me");
     overflow-y: hidden;
   
     &__container {
       display: flex;
       flex-direction: row;
       position: relative;
-      margin: 95px;
-      width: 100%;
-      left: 7rem;
-
+      min-height: 100vh;
     }
 
     &__img-container {
@@ -98,9 +93,9 @@
     &__message {
       position: absolute;
       justify-content: flex-end;
-      width:80%;
-      left: 47%;
-      top: -7%;
+      width: 80%;
+      left: 10rem;
+      top: -2rem;
 
       &--box {
         width: 42%;

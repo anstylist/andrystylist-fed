@@ -42,3 +42,41 @@ export const getInitialUserData = async ({ token }) => {
     buildAndThrowProperError(error)
   }
 }
+
+
+export const signUp = async (newUser) => {
+  try {
+    const { data } = await http.post('/auth/local/register', newUser)
+
+    return data?.user
+  } catch ( error) {
+    if (error.response?.data?.error?.message) {
+      throw new Error(error.response.data.error.message)
+    }
+    throw error
+  }
+}
+
+export const confirmEmail = async (confirmation) => {
+  try {
+    const { data } = await http.get(`/auth/email-confirmation?confirmation=${confirmation}`, {
+      maxRedirects: 0
+    })
+    
+    return data
+  } catch (error) {
+    buildAndThrowProperError(error)
+  }
+}
+
+export const forgotPassword = async (email) => {
+  try {
+    const { data } = await http.post(`/auth/forgot-password`, {
+      email
+    })
+    
+    return data
+  } catch (error) {
+    buildAndThrowProperError(error)
+  }
+}

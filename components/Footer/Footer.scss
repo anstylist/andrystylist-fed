@@ -35,9 +35,10 @@
     width: 100%;
     background-color: variables.$bg-main-color;
     font-size: variables.$font-size-x-small;
+    color: variables.$font-main-color;
   }
 
-  &__social-networks {
+  &__social-networks.social-networks {
     color: variables.$font-default-color;
     display: flex;
     flex-direction: column;

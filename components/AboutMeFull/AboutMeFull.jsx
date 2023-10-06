@@ -11,6 +11,7 @@ function AboutMeFull() {
   }, [])
 
   return (
+    <div className="about-me">
       <div className="about-me__container">
         <div className='about-me__img-container' data-aos="fade-up-right">
           <Image
@@ -55,6 +56,7 @@ function AboutMeFull() {
           </section>
         </div>
       </div>
+    </div>
   )
 }
 
