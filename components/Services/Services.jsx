@@ -17,7 +17,7 @@ function Services({ showButton, showMoreServices }) {
                 fill
               />
               <p className='services__description'>
-                I offer a wide range of hair color services, from simple root touch-ups to complex balayage and ombre techniques. I use the highest quality products to ensure that your hair is healthy and shiny, and I work with you to create a color that you love.
+              {`I offer a wide range of hair color services, from simple root touch-ups to complex balayage and ombre techniques. I use the highest quality products to ensure that your hair is healthy and shiny, and I work with you to create a color that you love.`}
               </p>
             </div>
             <h3 className='services__title' tabIndex={0}>
@@ -33,7 +33,7 @@ function Services({ showButton, showMoreServices }) {
                 fill
               />
               <p className='services__description'>
-                Whether you're looking for a trim, a new style, or a complete makeover, I can help. I have extensive experience cutting all types of hair, and I'm skilled in both classic and modern styles. I'll work with you to find a haircut that flatters your face shape and hair type, and I'll teach you how to style it at home.
+                {`Whether you're looking for a trim, a new style, or a complete makeover, I can help. I have extensive experience cutting all types of hair, and I'm skilled in both classic and modern styles. I'll work with you to find a haircut that flatters your face shape and hair type, and I'll teach you how to style it at home.`}
               </p>
             </div>
             <h3 className='services__title' tabIndex={0}>
@@ -49,7 +49,7 @@ function Services({ showButton, showMoreServices }) {
                 fill
               />
               <p className='services__description'>
-                Whether you're going to a special event or just want to look your best, I can create a hairstyle that is both flattering and unique. I offer a variety of styling services, including blowouts, updos, and braids.
+                {`Whether you're going to a special event or just want to look your best, I can create a hairstyle that is both flattering and unique. I offer a variety of styling services, including blowouts, updos, and braids.`}
               </p>
             </div>
             <h3 className='services__title' tabIndex={0}>
@@ -72,7 +72,7 @@ function Services({ showButton, showMoreServices }) {
                 fill
               />
               <p className='services__description'>
-              I offer a professional makeup service applying products of recognized brands, I will create a look that makes you feel safe and radiant, for any occasion and skin type adapted to you and your needs.
+                {`I offer a professional makeup service applying products of recognized brands, I will create a look that makes you feel safe and radiant, for any occasion and skin type adapted to you and your needs.`}
               </p>
             </div>
             <h3 className='services__title' tabIndex={0}>
@@ -88,7 +88,7 @@ function Services({ showButton, showMoreServices }) {
                 fill
               />
               <p className='services__description'>
-              Learn to do your makeup and hair like a professional with our personalized courses (in-person and virtual). Basic, advanced techniques for any occasion. The courses are personalized so that you learn the techniques you need, there are braids, makeup and hairstyle courses. Courses are available for all levels, from beginners to advanced.
+              {`Learn to do your makeup and hair like a professional with our personalized courses (in-person and virtual). Basic, advanced techniques for any occasion. The courses are personalized so that you learn the techniques you need, there are braids, makeup and hairstyle courses. Courses are available for all levels, from beginners to advanced.`}
               </p>
             </div>
             <h3 className='services__title' tabIndex={0}>
@@ -104,7 +104,7 @@ function Services({ showButton, showMoreServices }) {
                 fill
               />
               <p className='services__description'>
-              Find everything you need for your beauty in one place We offer a wide selection of makeup, skin care and hair products from top brands. Find what you are looking for to look radiant and confident.
+              {`Find everything you need for your beauty in one place We offer a wide selection of makeup, skin care and hair products from top brands. Find what you are looking for to look radiant and confident.`}
               </p>
             </div>
             <h3 className='services__title' tabIndex={0}>
