@@ -13,7 +13,6 @@ export async function getServerSideProps(ctx) {
   }
 
   try {
-    console.log('--- AC - getServerSideProps: ', confirmationToken, JSON.parse(JSON.stringify(ctx)))
     const data = await AuthService.confirmEmail(confirmationToken)
     return { props: { data, error } }
   } catch (err) {

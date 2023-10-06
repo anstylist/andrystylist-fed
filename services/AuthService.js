@@ -1,12 +1,6 @@
 import { http } from './http'
 
 const buildAndThrowProperError = (error) => {
-  console.log('--- AC - ', {
-    error,
-    status: error.response.status,
-    message: error.response?.data?.error?.message,
-  })
-  
   if ([401, 403, 400].includes(error.response.status)) {
     throw new Error('Invalid credentials — check your email and password out!')
   } else if (error.response.status === 500) {
@@ -24,7 +18,6 @@ export const login = async ({ identifier, password }) => {
     
     return data
   } catch (error) {
-    console.log(error)
     buildAndThrowProperError(error)
   }
 }

@@ -28,10 +28,10 @@ function AboutMe() {
             <h2>About Me</h2>
             <div>
               <p>
-                Hi, I'm Andry Peña, a stylist specialized in hair and makeup. I have been passionate about beauty for as long as I can remember, and I love helping my clients look and feel their best.
+                {`Hi, I'm Andry Peña, a stylist specialized in hair and makeup. I have been passionate about beauty for as long as I can remember, and I love helping my clients look and feel their best.`}
               </p>
               <p>
-                I have over 12 years of experience in the beauty industry, and I have worked with a wide range of clients, from celebrities to everyday people. I am skilled in all aspects of color, hair and makeup, and I am always up for a challenge.
+                {`I have over 12 years of experience in the beauty industry, and I have worked with a wide range of clients, from celebrities to everyday people. I am skilled in all aspects of color, hair and makeup, and I am always up for a challenge.`}
               </p>
             </div>
             <Button isLink href='/about-me' type='primary' className='about-me__message--button'>
