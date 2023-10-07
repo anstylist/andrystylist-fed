@@ -1,6 +1,9 @@
 @use "../../styles/variables";
 
 .page {
+  &__main {
+    margin-top: 10vh;
+  }
   &__title {
     display: flex;
     justify-content: center;

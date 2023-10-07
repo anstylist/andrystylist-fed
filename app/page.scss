@@ -7,3 +7,9 @@
   justify-content: space-between;
   min-height: 200vh;
 }
+
+.home {
+  &__main {
+    margin-top: 10vh;
+  }
+}

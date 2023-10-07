@@ -13,12 +13,14 @@ import { AuthProvider } from '../context/AuthContext'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
+import '@/app/page.scss'
+
 export default function Home() {
   return (
     <AuthProvider>
       <CartProductsProvider>
         <Header />
-        <main>
+        <main className='home__main'>
           <h1 className='home__main-title'>Andry Peña Home Page</h1>
           <HomeGallery />
           <AboutMe />

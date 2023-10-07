@@ -11,7 +11,7 @@ export default function About() {
     <AuthProvider>
       <CartProductsProvider>
         <Header />
-        <main>
+        <main className='page'>
           <AboutMeFull />
           <ContactUs />
         </main>

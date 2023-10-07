@@ -10,7 +10,7 @@ export default function LoginPage() {
     <AuthProvider>
       <CartProductsProvider>
         <Header />
-        <main>
+        <main className='page__main'>
           <LoginForm />
         </main>
         <Footer />

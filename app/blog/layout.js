@@ -4,8 +4,8 @@ import { Raleway } from 'next/font/google'
 const font = Raleway({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Email Confirmation - Andrystylist',
-  description: "Email Confirmation - Andry Peña's Page - Hair style and Makeup artist",
+  title: 'Blog - Andrystylist',
+  description: "Blog - Andry Peña's Page - Hair style and Makeup artist",
   keywords: 'hair, skincare, style, beauty, haircut, hairstyle, makeup, makeup artist, glam, glamour, andry, peña, bride, andrystylist, maquillaje, peinados, cortes, productos, entrepreneurship, woman, content creator, influencer, creadora de contenido, fiance, novia',
   author: 'Andry Peña',
   'og:title': 'Andrystylist',

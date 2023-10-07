@@ -1,6 +1,6 @@
 import { http } from './http'
 
-const buildAndThrowProperError = (error) => {
+export const buildAndThrowProperError = (error) => {
   if ([401, 403, 400].includes(error.response.status)) {
     throw new Error('Invalid credentials — check your email and password out!')
   } else if (error.response.status === 500) {

@@ -12,7 +12,7 @@ export default function Service() {
     <AuthProvider>
       <CartProductsProvider>
         <Header />
-        <main>
+        <main className='page__main'>
           <div className='page__title'>
             <h1 className='page__title-h1'>Our Services</h1>
           </div>

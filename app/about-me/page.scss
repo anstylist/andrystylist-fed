@@ -1,6 +1,7 @@
 @use "../../styles/variables";
 
 .page {
+  margin-top: 8vh;
   &__title {
     display: flex;
     justify-content: center;
@@ -17,3 +18,7 @@
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .page {
+  }
+}

@@ -28,7 +28,7 @@ const LoginForm = ({ alert }) => {
     if (authData.token) {
       redirect('/');
     }
-  }, [])
+  }, [authData])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
