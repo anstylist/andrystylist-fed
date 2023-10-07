@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import './globals.scss'
 import { Raleway } from 'next/font/google'
+import GoogleAnalytics from '@/components/GoogleAnalytics/GoogleAnalytics';
 
 const font = Raleway({ subsets: ['latin'] })
 
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
       </Head>
       <body className={font.className}>
         <div id="root">
+          <GoogleAnalytics />
           {children}
         </div>
       </body>
