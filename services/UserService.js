@@ -15,3 +15,16 @@ export const newsletterSignup = async ({ email }) => {
   }
 }
 
+export const contact = async ({ name, email, message }) => {
+  try {
+    const { data } = await http.post(`/contact`, {
+      name,
+      email,
+      message
+    })
+    
+    return data
+  } catch (error) {
+    buildAndThrowProperError(error)
+  }
+}

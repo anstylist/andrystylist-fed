@@ -1,13 +1,55 @@
-import './ContactUs.scss'
+'use client'
+
+import React, { useContext, useState, useEffect } from "react";
 import Grid from '@mui/material/Unstable_Grid2';
 import { BiLogoWhatsapp, BiEnvelope } from 'react-icons/bi'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Loading from "../Loading/Loading";
+import * as Service from "@/services/UserService";
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/components/UIMaterialTheme/ThemeProvider';
 
+import './ContactUs.scss'
+
 function ContactUs () {
+    const [error, setError] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+    
+    const [contact, setContact] = useState({
+      name: '',
+      email: '',
+      message: ''
+    });
+  
+    const handleChange = (event) => {
+      const {name, value} = event.target
+      setContact((prev) => ({ 
+        ...prev,
+        [name]: value 
+      }))
+    }
+    
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsLoading(true);
+    
+        try {
+          const contactData = await Service.contact(contact)
+          setError(null)
+          setContact({
+            name: '',
+            email: '',
+            message: ''
+          })
+        } catch (error) {
+          setError(error)
+        } finally {
+          setIsLoading(false);
+        }
+    };
+
   return (
     <ThemeProvider theme={theme}>
         <section className='contact-us'>
@@ -37,9 +79,10 @@ function ContactUs () {
                     </Grid>
                     <Grid xs={12} md={6}>
                         <section className='contact-us__message'>
-                            <Box
-                                component="form"
+                            <form
                                 autoComplete="off"
+                                onSubmit={handleSubmit}
+                                className='contact-form__form'
                             >
                                 <Grid container spacing={2} className="contact-us__message--first-row">
                                     <Grid xs={6}>
@@ -51,6 +94,9 @@ function ContactUs () {
                                             variant="standard"
                                             maxLength="50"
                                             className='contact-us__message--input'
+                                            value={contact.name}
+                                            inputProps={{ minLength: 2, maxLength: 100, autoComplete: 'off' }}
+                                            onChange={handleChange}
                                         />
                                     </Grid>
                                     <Grid xs={6}>
@@ -63,17 +109,24 @@ function ContactUs () {
                                             type='email'
                                             maxLength="255"
                                             className='contact-us__message--input'
+                                            value={contact.email}
+                                            inputProps={{ minLength: 5, maxLength: 100, autoComplete: 'off' }}
+                                            onChange={handleChange}
                                         />
                                     </Grid>
                                     <Grid xs={12}>
                                         <TextField
                                             required
                                             id="message"
+                                            name="message"
                                             label="Message"
                                             multiline
                                             rows={4}
                                             variant="standard"
                                             className='contact-us__message--textarea'
+                                            value={contact.message}
+                                            inputProps={{ minLength: 10, maxLength: 100, autoComplete: 'off' }}
+                                            onChange={handleChange}
                                         />
                                     </Grid>
                                 </Grid>
@@ -83,13 +136,14 @@ function ContactUs () {
                                         variant="outlined"
                                         className='contact-us__message--submit'
                                     >
-                                        Sent
+                                        Send
                                     </Button>
                                 </div>
-                            </Box>
+                            </form>
                         </section>
                     </Grid>
                 </Grid>
+                {isLoading && <Loading />}
             </div>
         </section>
     </ThemeProvider>
