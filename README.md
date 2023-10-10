@@ -24,7 +24,6 @@ Before getting started with development for the project, you must first make sur
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/en)
 - [npm](https://www.npmjs.com/)
-- Any IDE of your preference
 
 <a name="install"></a>
 ## Installation
@@ -71,6 +70,14 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## screenshot mobile 📷
+![image](<screenshots/mobile (3).png>)
+
+## screenshot Desktop 📷
+![image](<screenshots/desktop (1).png>)
+
+
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -97,27 +104,27 @@ Bear in mind that some of the most recent changes might not have been migrated y
 
 <a name="features"></a>
 
-**Development**
+### Development
 
 Want to contribute? Great!
 
-To fix a bug or enhance an existing module, follow these steps:
+- To fix a bug or enhance an existing module, follow these steps:
 
-Fork the repo
+- Fork the repo
 
-Create a new branch (`git checkout -b improve-feature`)
+- Create a new branch (`git checkout -b improve-feature`)
 
-Make the appropriate changes in the files
+- Make the appropriate changes in the files
 
-Add changes to reflect the changes made
+- Add changes to reflect the changes made
 
-Commit your changes (`git commit -am 'Improve feature'`)
+- Commit your changes (`git commit -am 'Improve feature'`)
 
-Push to the branch (`git push origin improve-feature`)
+- Push to the branch (`git push origin improve-feature`)
 
-Create a Pull Request
+- Create a Pull Request
 
-**Bug / Feature Request**
+### Bug / Feature Request
 
 If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/anstylist/andrystylist-fed/issues/new) by including your search query and the expected result.
 
